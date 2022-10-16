@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+details {
+  margin: 40px;
+}
+summary {
+  display: flex;
+  writing-mode: vertical-lr;
+  text-align: center;
+  color: #4A88C4;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: transform 200ms ease-in-out 0s;
+}
+summary::before,
+summary::after {
+  position: static;
+  top: 0;
+  left: 0;
+}
+summary::before {
+  content: "";
+}
+summary::after {
+  content: "III";
+  letter-spacing: -1px;
+}
+summary:hover {
+  transform: scale(1.1);
+}
+summary::marker {
+  font-size: 0;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .menu {
+  animation-name: menuAnim;
+}
+.menu {
+  height: 0;
+  width: fit-content;
+  border-radius: 10%;
+  background-color: #4A88C4;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  animation: closeMenu 300ms ease-in-out forwards;
+}
+.menu a {
+  padding: 12px 24px;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: filter 200ms linear 0.3s;
+}
+.menu a:nth-of-type(1) {
+  padding-top: 24px;
+}
+.menu a:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.menu a:hover {
+  filter: brightness(200%);
+  color: #000;
+  transition: 0.4s;
+}
+@keyframes menuAnim {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 250px;
+  }
+}
+.header{
+  text-align: center;
+  margin: 20px;
+}
+.article{
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  background-color: #4A88C4;
+  padding: 20px 0;
+}
+.footer{
+  background: #194169;
+  color: #fff;
+  width: 100vw;
+  padding: 10px 0;
+  text-align: center;
+}
+.container{
+  text-align: center;
+}
+input[type="submit"] {
+  display: flex;
+  width: 100px;
+  margin: 15px auto;
+  height: 30px;
+  font-size: 1.1rem;
+  color: black;
+  background-color: rgba(0, 0, 0, .0);
+  border-radius: 14px;
+  border-color: black;
+}
+.contact{
+  background-color: #4A88C4;
+  padding: 10px;
+}
+.judul1{
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+.judul2{
+  font-weight: bold;
+  font-size: 30px;
+  color: #4A88C4;
+  margin-bottom: 10px;
+}
+.video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 960px;
+  height: 520px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20%;
+}
